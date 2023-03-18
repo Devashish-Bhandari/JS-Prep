@@ -364,13 +364,13 @@ inputField.addEventListener('keyup', debounce(getData, 300));
 let count = 10
 
 for (let i = 0; i < 10; i++) {
-  function timer(i) {
+  function timers(i) {
     setTimeout(() => {
       console.log(count)
       count--
     }, i * 500)
   }
-  timer(i)
+  timers(i)
 }
 
 
@@ -395,7 +395,7 @@ const expensive = () => {
   window.addEventListener('resize', func)
 
 
-MODULE REVEALING PATTERN
+// MODULE REVEALING PATTERN
 
 var cusNs= (function(){
     function Customer(){console.log("I am customer")};
@@ -410,8 +410,8 @@ var cusNs= (function(){
 var newObj= cusNs;
 newObj.Customer();
 
-WAYS TO CREATE JAVASCRIPT OBJECT
-1. LITERAL
+// WAYS TO CREATE JAVASCRIPT OBJECT
+// 1. LITERAL
 
 var pat= {name: '', address: ''};
 pat.Admit = function(){
@@ -420,13 +420,13 @@ pat.Admit = function(){
 
 pat.Admit();
 
-2. Object.create();
+// 2. Object.create();
 var patNew= Object.create(pat);
 patNew.age= 33;
 pat.name= "dhruv"
 console.log(patNew);
 
-3. Constructor
+// 3. Constructor
 function Patient(){
     this.name= "",
     this.address= "",
@@ -435,7 +435,7 @@ function Patient(){
 var pat1= new Patient();
 console.log(pat1);
 
-4. Class Keyword
+// 4. Class Keyword
 class Patientclass{
 
 }
@@ -477,10 +477,10 @@ console.log(Employee.__proto__);
 
 console.log(Employee.prototype === emp.__proto__);
 
-let inputField= document.getElementById('input-element');
-console.log(inputField);
+let inputField2= document.getElementById('input-element');
+console.log(inputField2);
 
-inputField.addEventListener('keyup', debounce(storeVal, 1000));
+inputField2.addEventListener('keyup', debounce(storeVal, 1000));
 
 function storeVal(e){
     console.log(e.target.value);
@@ -497,8 +497,8 @@ function debounce(fn, delay){
     }
 }
 
-let inputField= document.getElementById('input-element');
-inputField.addEventListener('keyup', throttle(storeVal, 1000));
+let inputField1= document.getElementById('input-element');
+inputField1.addEventListener('keyup', throttle(storeVal, 1000));
 
 function storeVal(e){
     console.log(e.target.value);
@@ -548,4 +548,4 @@ check();
 check();
 
 
-CLOSURE, THIS KI BINDING, __PROTO__ (DUNDER PROTO), EVENT HANDLING, DOM MANIPULATION, CURRYING
+// CLOSURE, THIS KI BINDING, __PROTO__ (DUNDER PROTO), EVENT HANDLING, DOM MANIPULATION, CURRYING
