@@ -548,4 +548,58 @@
 // check();
 
 
-// CLOSURE, THIS KI BINDING, __PROTO__ (DUNDER PROTO), EVENT HANDLING, DOM MANIPULATION, CURRYING
+// // CLOSURE, THIS KI BINDING, __PROTO__ (DUNDER PROTO), EVENT HANDLING, DOM MANIPULATION, CURRYING
+
+
+
+// function func(){
+//     let a= 10;
+//     function nf(){
+//         a++;
+//         function anf(){
+//             a++;
+//             console.log("anf", a);
+//         }
+//         console.log("nf" , a);
+//         return anf;
+//     }
+//     return nf;
+// }
+
+// let x = func();
+// let y= x();
+// let z= y();
+// let a= z;
+
+
+function Car(name, price){
+    this.name= name;
+    this._price= price;
+    this.isValid= function(){
+        return price>1000;
+    }
+}
+
+let maruti = new Car("Maruti", 100);
+let bmw= Car("BMW", 1000);
+
+console.log(maruti);
+// bmw._price=20000;
+console.log(bmw);
+
+// bmw.isValid= function(){
+//     return "I am a happy boy";
+// }
+
+// console.log(bmw.isValid());
+
+Boolean.prototype.sahiKaro= function(){
+    if (this === true){
+        console.log("Ye true hai");
+    }
+    else{
+        console.log("Ye true nahi hai");
+    }
+}
+
+let t= true;
