@@ -571,7 +571,7 @@
 // let z= y();
 // let a= z;
 
-
+// CREATING A CLASS
 function Car(name, price){
     this.name= name;
     this._price= price;
